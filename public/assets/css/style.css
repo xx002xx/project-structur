@@ -1,0 +1,102 @@
+.btn {
+  text-decoration: none;
+  display: block;
+  width: 5em;
+  height: 3em;
+  border-radius: 25px;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  outline: none;
+  border: none;
+  padding-top: 0.6rem;
+  padding-bottom: 0.7rem;
+
+  background-image: linear-gradient(to right, #24408e, #375bbe, #24408e);
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  background-size: 200%;
+  transition: 0.5s;
+}
+
+#prediksi {
+  width: 10em;
+}
+
+.btn:hover {
+  background-position: right;
+  transform: scale(1.1);
+}
+a {
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 10px 30px 40px;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.drop_box {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+.btk {
+  text-decoration: none;
+  background-color: #005af0;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 1em;
+}
+
+.btk:hover {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #005af0;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
