@@ -70,9 +70,7 @@ def predict():
 
             print("cek daun "+ daun)
             print("Gambar " + filename)
-            #return send_from_directory(app.static_folder, 'predict.html',dauns = daun)
             return render_template('predict.html', dauns=daun,solusi=text, filenam = filename)
-            #return send_file(fim, daun = daun, prob=class_prediction, text=text, user_image = file_path)
         else:
             return "Unable to read the file. Please check file extension"
             
