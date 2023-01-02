@@ -10,7 +10,8 @@ import os
 
 app = Flask(__name__, static_folder='public')
 model = load_model("Modelan.h5")
-target_img = os.path.join(os.getcwd() , '/public/static/images')
+target_img ="public/static/images"
+app.config['UPLOAD_FOLDER'] = app.static_folder+"/static/images"
 
 @app.route('/')
 def index_view():
@@ -35,14 +36,17 @@ def read_image(filename):
 @app.route('/predict',methods=['GET','POST'])
 def predict():
     if request.method == 'POST':
-        f = request.files['file']
-        if f and allowed_file(f.filename): #Checking file format
-            filename = f.filename
+        file = request.files['file']
+        if file and allowed_file(file.filename): #Checking file format
+            filename = file.filename
             
             if(filename != ""):
-              file_path = os.path.join(target_img, filename)
+                 file_path = os.path.join(target_img, filename)
             
-            f.save(file_path)
+            file.save(os.path.join(
+                app.config['UPLOAD_FOLDER'],
+                filename
+            ))
 
             img = read_image(file_path) #prepressing method
 
