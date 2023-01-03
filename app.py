@@ -75,6 +75,7 @@ def predict():
             print("cek daun "+ daun)
             print("Gambar " + filename)
             return render_template('predict.html', dauns=daun,solusi=text, filenam = filename)
+            os.remove(file_path)
         else:
             return "Unable to read the file. Please check file extension"
             
