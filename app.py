@@ -5,9 +5,6 @@ from keras.applications.vgg16 import preprocess_input
 from keras.utils import image_utils, load_img
 import os
 
-
-
-
 app = Flask(__name__, static_folder='public')
 model = load_model("Modelan.h5")
 target_img ="public/static/images"
